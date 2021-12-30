@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="img/question-mark.png" />
+
+    <title>Guess My Number!</title>
+  </head>
+  <body>
+    <header>
+      <h1>Guess My Number!</h1>
+      <p class="between">(Between 1 and 20)</p>
+      <button class="btn settings">Settings</button>
+      <button class="btn again">Again!</button>
+      <div class="number">?</div>
+    </header>
+
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <div class="pel">
+        <h2 class="options">Increase number</h2>
+        <div class="info">
+          <input
+            type="number"
+            placeholder="75"
+            min="10"
+            class="input-between"
+          />
+          <button class="ok">Ok</button>
+        </div>
+        <p class="minimum">* minimum is 10 *</p>
+      </div>
+    </div>
+
+    <div class="overlay hidden"></div>
+
+    <main>
+      <section class="left">
+        <input type="number" min="1" class="guess" />
+        <button class="btn check" id="check">Check!</button>
+      </section>
+      <section class="right">
+        <p class="message">Start guessing...</p>
+        <p class="label-score">💯 Score: <span class="score">20</span></p>
+        <p class="label-highscore">
+          🥇 Highscore: <span class="highscore">0</span>
+        </p>
+      </section>
+    </main>
+    <script defer src="script.js"></script>
+  </body>
+</html>

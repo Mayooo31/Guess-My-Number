@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Press Start 2P', sans-serif;
+  color: #eee;
+  background-color: #222;
+  position: relative;
+}
+
+header {
+  position: relative;
+  height: 35vh;
+  border-bottom: 0.7rem solid #eee;
+}
+
+main {
+  height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.left {
+  width: 52rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right {
+  width: 52rem;
+  font-size: 2rem;
+}
+
+.guess {
+  background: none;
+  padding: 2.5rem;
+  border: 0.4rem solid #eee;
+  color: inherit;
+  font-family: inherit;
+  font-size: 5rem;
+  text-align: center;
+  display: block;
+  width: 25rem;
+  margin-bottom: 3rem;
+}
+
+h1 {
+  position: absolute;
+  text-align: center;
+  font-size: 4rem;
+  width: 100%;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number {
+  background: #eee;
+  color: #333;
+  position: absolute;
+  text-align: center;
+  font-size: 6rem;
+  bottom: 0;
+  left: 50%;
+  width: 15rem;
+  padding: 3rem 0;
+  transform: translate(-50%, 50%);
+}
+
+.between {
+  position: absolute;
+  text-align: center;
+  font-size: 1.6rem;
+  width: 100%;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.settings {
+  font-size: 1.6rem;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+.again {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}
+
+.ok {
+  background: #222;
+  padding-left: 1.4rem;
+  padding-right: 1rem;
+  color: white;
+  font-family: inherit;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.ok:hover {
+  color: #222;
+  background: white;
+}
+
+.btn {
+  background-color: #eee;
+  color: #222;
+  font-family: inherit;
+  padding: 2rem 3rem;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: #222;
+  color: #eee;
+}
+
+.message {
+  margin-bottom: 8rem;
+  height: 3rem;
+}
+
+.label-score {
+  margin-bottom: 2rem;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(100, 57, 57, 0.459);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.hidden {
+  display: none;
+}
+
+.close-modal {
+  position: absolute;
+  top: -1rem;
+  right: 1rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 1.4rem;
+  color: #222;
+  background-color: white;
+  padding: 3rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+li {
+  margin-left: 5rem;
+  margin-bottom: 5rem;
+  line-height: 3.8;
+}
+
+.options {
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.input-between {
+  background: none;
+  padding: 1rem;
+  border: 0.4rem solid #222;
+  color: inherit;
+  font-family: inherit;
+  font-size: 2rem;
+  text-align: center;
+  display: block;
+  width: 15rem;
+  margin: 0 1rem;
+}
+
+input::placeholder {
+  color: rgba(0, 0, 0, 0.274);
+}
+
+.pel {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+}
+
+.oneLine {
+  display: flex;
+  align-items: center;
+}
+
+.minimum {
+  padding-top: 1.5rem;
+  color: red;
+}
+
+/* ************************************* */
+/* BELOW 800px = 49em  */
+/* ************************************* */
+
+@media (max-width: 49em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/* ************************************* */
+/* BELOW 600px = 37.5em  */
+/* ************************************* */
+
+@media (max-width: 37.5em) {
+  main {
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 60vh;
+  }
+
+  h1 {
+    line-height: 1.4;
+    top: 60%;
+  }
+
+  .between {
+    top: 40%;
+  }
+
+  .guess {
+    font-size: 2.5rem;
+    padding: 1.7rem;
+  }
+
+  .right {
+    text-align: center;
+  }
+
+  header {
+    height: 40vh;
+  }
+
+  .number {
+    font-size: 5rem;
+    width: 10rem;
+    padding: 2rem 0;
+  }
+
+  .options {
+    font-size: 15px;
+  }
+}

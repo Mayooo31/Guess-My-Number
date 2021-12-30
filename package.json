@@ -1,0 +1,16 @@
+{
+  "name": "guessmynumber",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "core-js": "^3.20.1",
+    "regenerator-runtime": "^0.13.9"
+  }
+}
